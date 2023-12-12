@@ -1,0 +1,490 @@
+/*------------para todo el sitio */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color:#d7a9a9;;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+/*------------------home--------------------*/
+#Home {
+  background-image: url("../img/fondohome.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/*he<nav class="navbar-desktop">ader */
+
+.navdestockp {
+  display: flex;
+  justify-content: right; 
+}
+.headerList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.headerList li {
+  margin: 10px 10px; 
+}
+
+.headerList a {
+  
+  color: white; 
+}
+#navbar-mobile{
+  display: none;
+}
+
+
+/*MAIN*/
+
+.homer {
+  box-sizing: border-box;
+  width: 100%;
+  min-height:85vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el contenedor del título */
+.titulo {
+  text-align: center;
+}
+
+/* Estilos para el h1 (título principal) */
+.titulo h1 {
+  font-size: 3em; 
+  margin-bottom: 20px; 
+}
+
+/* Estilos para el h3 (subtítulo) */
+.titulo h3 {
+  font-size: 1.5em; 
+  margin: 0; 
+}
+
+/* Estilos específicos para el enlace del título */
+.titulo h1 a {
+  text-decoration: none; 
+  color :white; 
+}
+
+
+
+/*footer*/
+footer {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px; 
+ 
+}
+
+
+footer > div {
+  padding: 40px 0;
+}
+
+.box1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.footerColumns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.footerList {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.footerList li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.footerList li a {
+  color: #000;
+}
+.box2 {
+  margin: 0px 10px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* Estilo para el icono de WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  z-index: 999; 
+}
+
+/* Añade estilos adicionales según sea necesario */
+.whatsapp-icon img {
+  width: 50px; 
+  border-radius: 50%; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /
+}
+
+/*-------------------- Nav resto ------------------*/
+
+.backgroundHeader {
+  font-family: "Inter", sans-serif;
+  background-image: url("../img/headersobremi.png");
+  height: 5%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  overflow: auto; 
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex; 
+  padding: 10px;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row; 
+    align-items: end;
+  justify-content: end; 
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;/
+}
+
+header nav ul li {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+header nav a {
+  color: white;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: white;
+  color:black;
+}
+
+header h1 {
+  font-size: 50px;
+  margin: 10px 0; 
+  color: white;
+}
+
+/*--------- FOOTER del RESTO---------*/
+
+#colorDeFondo {
+  padding: 30px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  background-color:#bc948c;
+  margin: 5px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  overflow: auto; 
+ 
+}
+
+#colorDeFondo > div {
+  padding: 10px 0;
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  
+}
+
+.box1 a {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  margin: 0px 10px;
+  padding: 10px;
+  
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+.box3 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+
+/* Estilo para el icono de WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  z-index: 999; 
+}
+
+/* Añade estilos adicionales según sea necesario */
+.whatsapp-icon img {
+  width: 50px; 
+  border-radius: 50%; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /
+}
+  /* ------------------ MAIN ------------------*/
+
+
+/*--------- Sobre Mi -------*/
+main.sobremMi {
+  width: auto; 
+  height: 100vh;
+  margin: 5px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  overflow: auto; 
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+/* Estilos para la imagen */
+main.sobremMi img {
+  width: 50%;
+  height: auto; 
+}
+
+/* Estilos para la sección de texto */
+main.sobremMi section {
+   width: 50%;
+   padding: 20px; 
+   box-sizing: border-box; 
+}
+
+/* Alinea el título al centro */
+main.sobremMi section h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Ajusta estilos adicionales para el párrafo */
+main.sobremMi section p {
+  display: flex;
+  justify-content: center;
+  text-align: center; 
+}
+
+/*------------ Servicios --------------*/
+/* Estilo para el h2 centrado */
+.servicios {
+  width: auto; 
+  height: 100vh;
+  margin: 5px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  overflow: auto; 
+  
+}
+
+
+.servicios h2 {
+  text-align: center;
+}
+
+/* Estilo para el contenedor principal */
+.Container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  overflow: auto; 
+
+}
+
+/* Estilo para leftBox y rightBox */
+.leftBox {
+  box-sizing: border-box;
+  padding: 10%;
+  text-align: center;
+}
+
+.rightBox {
+  box-sizing: border-box;
+  padding: 10%;
+}
+
+
+.rightBox img {
+  width: 200 px;
+  height:300px ;
+
+}
+
+/* Estilo para la lista dentro de leftBox */
+.leftBox ul {
+  padding-left: 20px; 
+}
+.leftBoxer {
+  box-sizing: border-box;
+  padding: 10%;
+  text-align: center;
+}
+.rightBoxer {
+  box-sizing: border-box;
+  padding: 10%;
+}
+
+.rightBoxer img {
+  width: 200 px;
+  height:300px ;
+
+}
+
+.leftBoxers {
+  box-sizing: border-box;
+  padding: 10%;
+  text-align: center;
+}
+
+.rightBoxers {
+  box-sizing: border-box;
+  padding: 10%;
+}
+.rightBoxers img {
+  width: 200 px;
+  height:300px ;
+
+}
+/* Estilo para servicioContacos */
+.servicioContacos {
+  display: flex;
+   text-align: center;
+  justify-content: center;
+  margin-top: 20px; 
+  margin: 5px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  overflow: auto; 
+}
+
+.servicioContacos p {
+ display: flex;
+ flex-direction: column;
+text-align: center;
+justify-content: center;
+  margin-bottom: 20px; 
+}
+
+.servicioContacos a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color:#bc948c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+
+
+
+/*---------------Proyectos -----------------*/
+
+
+
+/*--------------Contactos ---------------*/
+
+/* Estilo para el contenedor principal */
+.formulario {
+  box-sizing: border-box;
+  width: 80%; 
+  margin: 20px auto; 
+  padding: 20px; 
+  border: 1px solid #ccc; 
+}
+
+/* Estilo para las etiquetas (labels) y los inputs */
+label,
+input,
+select,
+textarea,
+button {
+  display: block; 
+  margin-bottom: 10px
+} 
+
+/* Estilo específico para el botón */
+button {
+  padding: 10px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  cursor: pointer; 
+}
+
+
+@media screen and (max-width: 576px) {
+
+  .navbar-mobile {
+    display: initial;
+  }
+
+  .navdestockp{
+    display: none;
+  }
+
+}
+
+ 
