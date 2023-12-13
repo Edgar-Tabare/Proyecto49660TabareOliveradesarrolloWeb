@@ -26,9 +26,7 @@ a {
   font-family: "Inter", sans-serif;
 }
 
-/*he<nav class="navbar-desktop">ader */
-
-.navdestockp {
+header {
   display: flex;
   justify-content: right; 
 }
@@ -46,9 +44,6 @@ a {
 .headerList a {
   
   color: white; 
-}
-#navbar-mobile{
-  display: none;
 }
 
 
