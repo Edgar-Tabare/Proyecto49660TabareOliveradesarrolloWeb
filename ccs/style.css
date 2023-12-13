@@ -28,8 +28,15 @@ a {
 
 header {
   display: flex;
-  justify-content: right; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
+
+nav {
+  display: flex;
+}
+
 .headerList {
   list-style: none;
   display: flex;
@@ -38,12 +45,16 @@ header {
 }
 
 .headerList li {
-  margin: 10px 10px; 
+  margin: 0 10px;
 }
 
 .headerList a {
-  
-  color: white; 
+  color: white;
+
+}
+
+nav {
+  margin-left: auto;
 }
 
 
