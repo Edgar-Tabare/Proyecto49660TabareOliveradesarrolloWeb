@@ -28,8 +28,15 @@ a {
 
 header {
   display: flex;
-  justify-content: right; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
+
+nav {
+  display: flex;
+}
+
 .headerList {
   list-style: none;
   display: flex;
@@ -38,12 +45,16 @@ header {
 }
 
 .headerList li {
-  margin: 10px 10px; 
+  margin: 0 10px;
 }
 
 .headerList a {
-  
-  color: white; 
+  color: white;
+
+}
+
+nav {
+  margin-left: auto;
 }
 
 
@@ -156,6 +167,7 @@ footer > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   margin: 5px; 
   border: 1px solid #ddd; 
   border-radius: 10px; 
@@ -321,7 +333,7 @@ main.sobremMi section p {
 /* Estilo para el h2 centrado */
 .servicios {
   width: auto; 
-  height: 100vh;
+  height: auto;
   margin: 5px; 
   border: 1px solid #ddd; 
   border-radius: 10px; 
@@ -439,6 +451,101 @@ justify-content: center;
 
 
 
+#gridProyectos{
+ display: flex;
+ flex-direction: row;
+ margin: 5px; 
+ border: 1px solid #ddd; 
+ border-radius: 10px;
+  }
+
+  #gridProyectos > div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+     list-style: none; 
+  }
+
+
+.grid1 {
+  grid-area: grid1;
+   background-color: black;
+  color: white;
+  min-height: 100vh;
+  min-width: auto;
+  
+}
+
+.grid2 {
+  grid-area: grid2;
+  background-color:  black;
+  color: white;
+  min-height: 100vh;
+  min-width: auto;
+}
+
+
+.grid3 {
+grid-area: grid3;  
+background-color:  black;
+min-height: 100vh;
+ color: white;
+
+}
+
+.grid4 {
+  grid-area: grid4;
+  display: flex;
+  flex-direction: column;
+  background-color:tomato;
+}
+
+.nuestroObjetivo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  overflow: auto; 
+}
+.nuestroObjetivo1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  overflow: auto; 
+}
+
+.grid4 img {
+  width: 300px;
+  height:200px ;
+
+}
+.grid5 {
+  grid-area: grid5;
+  background-color: blue;
+}
+ .grid1 ul li {
+  text-align: center;
+  
+ }
+
+#gridProyectos{
+ display: grid;
+ gap: 5px;
+ grid-template-areas: 
+ "grid1  grid2  grid3 grid5"
+ "grid4 grid4   grid4 grid5";
+ grid-template-columns:33% 1fr 1fr 0.5fr; 
+ grid-template-rows:; 
+ min-width: 100wh;
+
+}
 /*--------------Contactos ---------------*/
 
 /* Estilo para el contenedor principal */
@@ -470,16 +577,10 @@ button {
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1000px) {
 
-  .navbar-mobile {
-    display: initial;
-  }
-
-  .navdestockp{
-    display: none;
+  .grid4 {
+    background-color: red;
   }
 
 }
-
- 
