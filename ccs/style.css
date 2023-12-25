@@ -218,6 +218,10 @@ header h1 {
   margin: 10px 0; 
   color: white;
 }
+#idmobile {
+  display: none;
+}
+
 
 /*--------- FOOTER del RESTO---------*/
 
@@ -627,80 +631,145 @@ button {
     background-color:rebeccapurple;
     font-family: "Inter", sans-serif;
   }
+/*-------------------HOME-------------------------------------*/
 
-  /*-------------------- Nav resto ------------------*/
-
-.backgroundHeader {
-  font-family: "Inter", sans-serif;
-  background-image: url("../img/headersobremi.png");
-  height: 5%;
+ /**--Footer--**/
+ footer {
+  padding-left: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 5px; 
-  border: 1px solid #ddd; 
-  border-radius: 10px; 
- 
 }
 
-/* header */
-header {
+.footerColumns {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex; 
-  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 
-  
 
-header nav {
+.box1 h3 {
+  text-align: center; /* Añade esta línea para centrar el h3 */
+}
+
+
+.box1 ul {
   display: flex;
-  flex-direction:column; 
-    align-items: end;
-  justify-content: end; 
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
-header nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-header nav ul li {
-  margin: 0 10px;
-  padding: 0 10px;
-}
-
-header nav a {
-  color: white;
-  border-radius: 50px;
-  padding: 10px;
-}
-
-nav a:hover {
-  background-color: white;
+.box1 a {
+  text-decoration: none;
   color:black;
 }
 
-.headerTitle {
-  font-size: 50px;
-  margin: 10px 0; 
-  color:violet;
-  
-}#colorDeFondo {
-  padding: 30px;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  background-color:#bc948c;
-  margin: 5px; 
-  border: 1px solid #ddd; 
-  border-radius: 10px; 
-  overflow: auto; 
-  font-family: "Inter", sans-serif;
- 
+.footerList {
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
+
+.footerList li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.footerList li a {
+  color: #000;
+}
+
+.box2 {
+  margin: 0px 10px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* Estilo para el icono de WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  z-index: 999; 
+}
+
+/* Añade estilos adicionales según sea necesario */
+.whatsapp-icon img {
+  width: 50px; 
+  border-radius: 50%; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  /*-------------------- Nav resto ------------------*/
+/* ... Código anterior ... */
+
+/* Establece el estilo predeterminado para el idmobile */
+#idmobile {
+  display: block;
+}
+
+/* Oculta los elementos que no tienen el idmobile */
+header nav > ul:not(#idmobile) {
+  display: none;
+}
+
+/* Restablece el estilo para la versión móvil */
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav ul {
+    display: none; 
+  }
+
+  #idmobile {
+    display: block; 
+  }
+
+  .headerTitle {
+    font-size: 50px;
+    margin: 10px 0;
+    color: violet;
+  }
+
+  #colorDeFondo {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #bc948c;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: auto;
+    font-family: "Inter", sans-serif;
+  }
+
+
+ 
+ 
+
+
 
 /*---------------- Footer Resto ----------------*/
 

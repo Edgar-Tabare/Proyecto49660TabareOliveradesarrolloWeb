@@ -3,10 +3,12 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="viewport" content="width=device-width, initial-s  cale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../ccs/style.css">
   <link rel="shortcut icon" href="../img/stories-04.jpg" type="image/x-icon" />
   <title>StefySabaño_Deco</title>
@@ -17,6 +19,36 @@
   backgroundHeader">
 
     <nav>
+      <nav id="idmobile" class="navbar navbar-light" style="background-color:auto;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobremi.html">Sobre Mi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactos.html">Contactos</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
       <ul>
 
         <li> <a href="../index.html">Home</a>
@@ -38,7 +70,7 @@
 
       <div class="grid1">
 
-        <h3>ESPACIOS FAMILIARES </h3>
+        <h3><a href="#familiares">Espacios Familiares</a></h3>
       </div>
 
       <div class="grid2">
@@ -75,7 +107,7 @@
           <img src="../img/proyectoliving.jpg" alt="living">
 
           <p>
-          <h3> Espacios Familiares</h3>
+          <h3 id="familiares"> Espacios Familiares</h3>
           Tu casa es literalmente, tu reflejo…representa una parte muy importante de tu vida, de la de tu familia y
           las personas que querés. Cuenta tu historia, donde empieza y termina tu día, y es por esto que es muy
           importante que sea pensada justamente para vos.
@@ -188,7 +220,9 @@
 
   </footer>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
