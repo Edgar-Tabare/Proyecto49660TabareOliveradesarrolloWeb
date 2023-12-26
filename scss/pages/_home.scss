@@ -1,0 +1,39 @@
+/*------------------home--------------------*/
+#Home {
+  background-image: url("../img/fondohome.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.homer {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  titulo {
+    text-align: center;
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 1.5em;
+      margin: 0;
+      text-align: center;
+      justify-content: center;
+    }
+   
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+ 
+}

@@ -1,0 +1,12 @@
+{
+  "name": "primer-pre-entrega",
+  "version": "1.0.0",
+  "description": "tabare olivera \r  mi proyecto del curso de coderhouse\r  solo una rama",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
