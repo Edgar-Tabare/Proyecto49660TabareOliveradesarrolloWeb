@@ -17,41 +17,34 @@ header {
   }
 }
 
-
 /*----- header del resto paginas---*/
 
 .backgroundHeader {
-    font-family: "Inter", sans-serif;
-    background-image: url("../img/headersobremi.png");
-    height: 5%;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 5px; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    overflow: auto; 
-  }
+  font-family: "Inter", sans-serif;
+  background-image: url("../img/headersobremi.png");
+  height: 5%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: auto;
+}
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 10px;
-  
-   
-  
-    h1 {
-      font-size: 50px;
-      margin: 10px 0;
-      color: white;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+  h1 {
+    font-size: 50px;
+    margin: 10px 0;
+    color: white;
   }
-  #idmobile {
-    display: none;
-  }
-  
-  
-
+}
+#idmobile {
+  display: none;
+}

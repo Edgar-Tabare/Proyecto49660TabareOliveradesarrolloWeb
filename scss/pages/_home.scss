@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  titulo {
+  .titulo {
     text-align: center;
     h1 {
       font-size: 3em;
@@ -29,11 +29,9 @@
       text-align: center;
       justify-content: center;
     }
-   
   }
   a {
     text-decoration: none;
     color: white;
   }
- 
 }

@@ -1,124 +1,168 @@
- @import "base/reset";
- 
- @import "pages/home";
-  
-  
-  @import "layout/header";
 
-  @import "layout/nav";
-  
- 
-  
-  
-  /*MAIN*/
-  
- 
-  
-  
-  
-  /*footer*/
+@import "abstracts/variables";
+@import "base/reset";
+
+@import "pages/home";
+@import "pages/sobremi";
+@import "pages/sevicios";
+@import "pages/proyectos";
+@import "pages/contactos";
+
+@import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+
+
+/**********ADAPTACION A MOBIL******************/
+
+@media screen and (max-width: 576px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rebeccapurple;
+    font-family: "Inter", sans-serif;
+  }
+  /*-------------------HOME-------------------------------------*/
+
+  /**--Footer--**/
   footer {
     padding-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5px; 
-   
+    margin: 5px;
   }
-  
-  
-  footer > div {
-    padding: 40px 0;
+
+  .footerColumns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
   }
-  
+
+  .box1 h3 {
+    text-align: center; /* Añade esta línea para centrar el h3 */
+  }
+
+  .box1 ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .box1 a {
     text-decoration: none;
     color: black;
   }
-  
-  .footerColumns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-  }
-  
+
   .footerList {
     padding: 0;
     margin: 0;
     text-align: center;
   }
-  
+
   .footerList li {
     display: inline-block;
     margin: 0 20px;
   }
-  
+
   .footerList li a {
     color: #000;
   }
+
   .box2 {
     margin: 0px 10px;
     padding: 10px;
     text-align: center;
     color: black;
   }
-  
+
   /* Estilo para el icono de WhatsApp */
   .whatsapp-icon {
     position: fixed;
-    bottom: 20px; 
+    bottom: 20px;
     right: 20px;
-    z-index: 999; 
+    z-index: 999;
   }
-  
+
   /* Añade estilos adicionales según sea necesario */
   .whatsapp-icon img {
-    width: 50px; 
-    border-radius: 50%; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
-  
-  
-  
-  /*--------- FOOTER del RESTO---------*/
-  
+
+  /*-------------------- Nav resto ------------------*/
+  /* ... Código anterior ... */
+
+  /* Establece el estilo predeterminado para el idmobile */
+  #idmobile {
+    display: block;
+  }
+
+  /* Oculta los elementos que no tienen el idmobile */
+  header nav > ul:not(#idmobile) {
+    display: none;
+  }
+
+  /* Restablece el estilo para la versión móvil */
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  #idmobile {
+    display: block;
+  }
+
+  .headerTitle {
+    font-size: 50px;
+    margin: 10px 0;
+    color: violet;
+  }
+
   #colorDeFondo {
     padding: 30px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
-    background-color:#bc948c;
-    margin: 5px; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    overflow: auto; 
+    background-color: #bc948c;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: auto;
     font-family: "Inter", sans-serif;
-   
   }
-  
+
+  /*---------------- Footer Resto ----------------*/
+
   #colorDeFondo > div {
     padding: 10px 0;
   }
-  
+
   .conteiner {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     width: 100%;
-   
-    
   }
-  
+
   .box1 a {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: black;
     margin: 0px 10px;
     padding: 10px;
-    
   }
-  
+
   .box2 {
     display: flex;
     flex-direction: column;
@@ -127,266 +171,78 @@
     text-align: center;
     color: black;
   }
-  
+
   .box3 {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
   }
-  
-  
+
   /* Estilo para el icono de WhatsApp */
   .whatsapp-icon {
     position: fixed;
-    bottom: 20px; 
+    bottom: 20px;
     right: 20px;
-    z-index: 999; 
+    z-index: 999;
   }
-  
+
   /* Añade estilos adicionales según sea necesario */
   .whatsapp-icon img {
-    width: 50px; 
-    border-radius: 50%; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
-    /* ------------------ MAIN ------------------*/
-  
-  
-  /*--------- Sobre Mi -------*/
-  main.sobremMi {
-    width: auto; 
-    height: 100vh;
-    margin: 5px; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    overflow: auto; 
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    font-family: "Inter", sans-serif;
-  }
-  
-  
-  /* Estilos para la imagen */
-  main.sobremMi img {
-    width: 50%;
-    height: auto; 
-  }
-  
-  /* Estilos para la sección de texto */
-  main.sobremMi section {
-     width: 50%;
-     padding: 20px; 
-     box-sizing: border-box; 
-  }
-  
-  /* Alinea el título al centro */
-  main.sobremMi section h2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  /* Ajusta estilos adicionales para el párrafo */
-  main.sobremMi section p {
-    display: flex;
-    justify-content: center;
-    text-align: center; 
-  }
-  
-  /*------------ Servicios --------------*/
-  /* Estilo para el h2 centrado */
-  .servicios {
-    width: auto; 
+
+  /*-------------------------------Proyectos--------------------*/
+
+  #gridProyectos {
+    width: auto;
     height: auto;
-    margin: 5px; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    overflow: auto; 
-    font-family: "Inter", sans-serif;
-    
-  }
-  
-  
-  .servicios h2 {
-    text-align: center;
-  }
-  
-  /* Estilo para el contenedor principal */
-  .Container1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 5px; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    overflow: auto; 
-    font-size: 12px;
-  
-  }
-  
-  /* Estilo para leftBox y rightBox */
-  .leftBox {
-    box-sizing: border-box;
-    padding: 10%;
-    text-align: center;
-  }
-  
-  .rightBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 10%;
-  }
-  
-  
-  .rightBox img {
-    width: 150 px;
-    height:200px ;
-  
-  }
-  
-  /* Estilo para la lista dentro de leftBox */
-  .leftBox ul {
-    padding-left: 20px; 
-  }
-  .leftBoxer {
-    box-sizing: border-box;
-    padding: 10%;
-    text-align: center;
-  }
-  .rightBoxer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 10%;
-  }
-  
-  .rightBoxer img {
-    width: 150 px;
-    height:200px ;
-  
-  }
-  
-  .leftBoxers {
-    box-sizing: border-box;
-    padding: 10%;
-    text-align: center;
-  }
-  
-  .rightBoxers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 10%;
-  }
-  .rightBoxers img {
-    width: 300px;
-    height:200px ;
-  
-  }
-  /* Estilo para servicioContacos */
-  .servicioContacos {
-    display: flex;
-     text-align: center;
-    justify-content: center;
-    margin-top: 20px; 
-    margin: 5px; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    overflow: auto; 
-  }
-  
-  .servicioContacos p {
-   display: flex;
-   flex-direction: column;
-  text-align: center;
-  justify-content: center;
-    margin-bottom: 20px; 
-  }
-  
-  .servicioContacos a {
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px 20px;
-    background-color:#bc948c;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
   }
-  
-  
-  
-  
-  
-  /*---------------Proyectos -----------------*/
-  
-  .proyectos {
-    
-    font-size: 12px;
-  }
-  
-  #gridProyectos{
-    width: auto; 
-    height: auto;
-    margin: 5px; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    
-    display: flex; 
-    flex-direction: row;
+  #gridProyectos > div {
+    display: flex;
+    text-align: center;
+    align-items: center;
     justify-content: center;
-   
-    }
-  
-    #gridProyectos > div {
-      display: flex;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-       list-style: none; 
-    }
-  
-  
+    text-decoration: none;
+    list-style: none;
+  }
+
   .grid1 {
     grid-area: grid1;
-     background-color: black;
+    background-color: black;
     color: white;
-     
   }
-  
+
   .grid2 {
     grid-area: grid2;
-    background-color:  black;
+    background-color: black;
     color: white;
-   
   }
-  
-  
+
   .grid3 {
-  grid-area: grid3;  
-  background-color:  black;
-  
-   color: white;
-  
+    grid-area: grid3;
+    background-color: black;
+
+    color: white;
   }
   .grid4 {
     grid-area: grid4;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
   }
-  
+
   .nuestroObjetivo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: white;
     color: black;
     min-width: 40%;
@@ -394,27 +250,24 @@
     padding: 30px;
     margin: 5px 20px;
     border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-     text-align: center;
-    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    text-align: center;
   }
-  
+
   .grid4 img {
     width: 200px;
     height: 200px;
-    margin-right: 20px
-    
+    margin-right: 20px;
   }
   .nuestroObjetivo p {
     text-align: center; /* Centrar el contenido del párrafo */
   }
-  
+
   .nuestroObjetivo h3 {
     text-align: center; /* Centrar el texto dentro de h3 */
   }
-  
-  
-  
+
   .grid5 {
     grid-area: grid5;
     display: flex;
@@ -426,370 +279,12 @@
     padding: 30px;
     margin: 5px 20px;
     border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-   
-    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
-  
+
   .grid5 img {
-    width: 100px;
-    height: 100px;
-   
+    width: 200px;
+    height: 200px;
   }
-   
-  
-  #gridProyectos{
-   display: grid;
-   gap: 5px;
-   grid-template-areas: 
-   "grid1  grid2  grid3 "
-   "grid4 grid4   grid5 ";
-   grid-template-columns:33% 1fr 1fr ; 
-   grid-template-rows:15% 1fr; 
-   min-width: 100wh;
-  
-  }
-  /*--------------Contactos ---------------*/
-  
-  /* Estilo para el contenedor principal */
-  .formulario {
-    box-sizing: border-box;
-    width: 80%; 
-    margin: 20px auto; 
-    padding: 20px; 
-    border: 1px solid #ccc; 
-  }
-  
-  /* Estilo para las etiquetas (labels) y los inputs */
-  label,
-  input,
-  select,
-  textarea,
-  button {
-    display: block; 
-    margin-bottom: 10px
-  } 
-  
-  /* Estilo específico para el botón */
-  button {
-    padding: 10px; 
-    background-color: #007bff; 
-    color: #fff; 
-    border: none; 
-    cursor: pointer; 
-  }
-  
-             /**********ADAPTACION A MOBIL******************/
-  
-  @media screen and (max-width: 576px) {
-  
-    body {
-      margin: 0;
-      padding: 0;
-      background-color:rebeccapurple;
-      font-family: "Inter", sans-serif;
-    }
-  /*-------------------HOME-------------------------------------*/
-  
-   /**--Footer--**/
-   footer {
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px; 
-  }
-  
-  .footerColumns {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
-  
-  
-  .box1 h3 {
-    text-align: center; /* Añade esta línea para centrar el h3 */
-  }
-  
-  
-  .box1 ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  
-  }
-  
-  .box1 a {
-    text-decoration: none;
-    color:black;
-  }
-  
-  .footerList {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .footerList li {
-    display: inline-block;
-    margin: 0 20px;
-  }
-  
-  .footerList li a {
-    color: #000;
-  }
-  
-  .box2 {
-    margin: 0px 10px;
-    padding: 10px;
-    text-align: center;
-    color: black;
-  }
-  
-  /* Estilo para el icono de WhatsApp */
-  .whatsapp-icon {
-    position: fixed;
-    bottom: 20px; 
-    right: 20px;
-    z-index: 999; 
-  }
-  
-  /* Añade estilos adicionales según sea necesario */
-  .whatsapp-icon img {
-    width: 50px; 
-    border-radius: 50%; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    /*-------------------- Nav resto ------------------*/
-  /* ... Código anterior ... */
-  
-  /* Establece el estilo predeterminado para el idmobile */
-  #idmobile {
-    display: block;
-  }
-  
-  /* Oculta los elementos que no tienen el idmobile */
-  header nav > ul:not(#idmobile) {
-    display: none;
-  }
-  
-  /* Restablece el estilo para la versión móvil */
-  
-    header nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    header nav ul {
-      display: none; 
-    }
-  
-    #idmobile {
-      display: block; 
-    }
-  
-    .headerTitle {
-      font-size: 50px;
-      margin: 10px 0;
-      color: violet;
-    }
-  
-    #colorDeFondo {
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #bc948c;
-      margin: 5px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: auto;
-      font-family: "Inter", sans-serif;
-    }
-  
-  
-   
-   
-  
-  
-  
-  /*---------------- Footer Resto ----------------*/
-  
-  #colorDeFondo > div {
-    padding: 10px 0;
-  }
-  
-  .conteiner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-   
-    
-  }
-  
-  .box1 a {
-    display: flex;
-    flex-direction: row;
-    color: black;
-    margin: 0px 10px;
-    padding: 10px;
-    
-  }
-  
-  .box2 {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 10px;
-    padding: 10px;
-    text-align: center;
-    color: black;
-  }
-  
-  .box3 {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-  
-  
-  /* Estilo para el icono de WhatsApp */
-  .whatsapp-icon {
-    position: fixed;
-    bottom: 20px; 
-    right: 20px;
-    z-index: 999; 
-  }
-  
-  /* Añade estilos adicionales según sea necesario */
-  .whatsapp-icon img {
-    width: 50px; 
-    border-radius: 50%; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
-  }
-  
-  
-  
-  /*-------------------------------Proyectos--------------------*/
-  
-    #gridProyectos{
-      width: auto; 
-      height: auto;
-      margin: 5px; 
-      border: 1px solid #ddd; 
-      border-radius: 10px; 
-          display: flex; 
-      flex-direction:column;
-      justify-content: center;
-     
-      }
-      #gridProyectos > div {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-         list-style: none; 
-      }
-    
-    
-    .grid1 {
-      grid-area: grid1;
-       background-color: black;
-      color: white;
-       
-    }
-    
-    .grid2 {
-      grid-area: grid2;
-      background-color:  black;
-      color: white;
-     
-    }
-    
-    
-    .grid3 {
-    grid-area: grid3;  
-    background-color:  black;
-    
-     color: white;
-    
-    }
-    .grid4 {
-      grid-area: grid4;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      
-    }
-    
-    .nuestroObjetivo {
-      display: flex;
-      flex-direction: column;
-      background-color: white;
-      color: black;
-      min-width: 40%;
-      min-width: 30%;
-      padding: 30px;
-      margin: 5px 20px;
-      border-radius: 10px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-       text-align: center;
-      
-    }
-    
-    .grid4 img {
-      width: 200px;
-      height: 200px;
-      margin-right: 20px
-      
-    }
-    .nuestroObjetivo p {
-      text-align: center; /* Centrar el contenido del párrafo */
-    }
-    
-    .nuestroObjetivo h3 {
-      text-align: center; /* Centrar el texto dentro de h3 */
-    }
-    
-    
-    
-    .grid5 {
-      grid-area: grid5;
-      display: flex;
-      flex-direction: column;
-      background-color: white;
-      color: black;
-      min-width: 40%;
-      min-height: 30%;
-      padding: 30px;
-      margin: 5px 20px;
-      border-radius: 10px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-     
-      
-    }
-    
-    .grid5 img {
-      width: 200px;
-      height: 200px;
-      }
-  
-  }
+}
