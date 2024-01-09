@@ -15,6 +15,15 @@ a {
   text-decoration: none;
 }
 
+button {
+  padding: 10px;
+  background-color: #bc948c;
+  color: black;
+  border-radius: 20px;
+  border: blanchedalmond;
+  cursor: pointer;
+}
+
 /*------------------home--------------------*/
 #Home {
   background-image: url("../img/fondohome.webp");
@@ -42,14 +51,39 @@ a {
 .homer .titulo h1 {
   font-size: 3em;
   margin-bottom: 20px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
-.homer .titulo h3 {
+@keyframes spin {
+  from {
+    transform: rotateX(20deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+}
+.homer h3 {
   font-size: 1.5em;
   margin: 0;
   text-align: center;
   justify-content: center;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
-.homer a {
+@keyframes spin {
+  from {
+    transform: rotateX(20deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+}
+
+a {
   text-decoration: none;
   color: white;
 }
@@ -170,14 +204,7 @@ main.sobremMi section p {
   margin-bottom: 20px;
 }
 .servicios .servicioContacos a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #bc948c;
-  color: #fff;
   text-decoration: none;
-  border-radius: 5px;
 }
 
 /*---------------Proyectos -----------------*/
@@ -289,17 +316,9 @@ main.sobremMi section p {
 .formulario label,
 .formulario input,
 .formulario select,
-.formulario textarea,
-.formulario button {
+.formulario textarea {
   display: block;
   margin-bottom: 10px;
-}
-.formulario button {
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
 }
 
 /*--header pagina incio ---*/
@@ -346,9 +365,17 @@ header h1 {
   font-size: 50px;
   margin: 10px 0;
   color: white;
+  animation: desaparecer 2s infinite;
 }
-
-#idmobile {
+@keyframes desaparecer {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+header #idmobile {
   display: none;
 }
 
@@ -423,6 +450,18 @@ footer .box2 {
   padding: 10px;
   text-align: center;
   color: black;
+}
+footer .map-container {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  height: 150px;
+}
+footer .map-container iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
 }
 footer .whatsapp-icon {
   position: fixed;
