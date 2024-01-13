@@ -1,27 +1,41 @@
-/* footer */
 footer {
+  
   padding-left: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5px;
+ 
   > div {
     padding: 40px 0;
   }
+
   .box1 a {
     text-decoration: none;
     color: black;
   }
+
   .footerColumns {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
   }
+
+  .colorDeFondo {
+    padding: 30px;
+    border: 1px solid #ddd; /* Añadido un borde de 10px */
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    width:100%; /* Ajustado para incluir el borde en el ancho total */
+    box-sizing: border-box; /* Hace que el ancho incluya el borde y el relleno */
+  }
+
   .footerList {
     padding: 0;
     margin: 0;
     text-align: center;
+
     li {
       display: inline-block;
       margin: 0 20px;
@@ -31,34 +45,107 @@ footer {
       }
     }
   }
+
   .box2 {
     margin: 0px 10px;
     padding: 10px;
     text-align: center;
     color: black;
   }
+
   .map-container {
     border: 2px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     width: 200px;
     height: 150px;
-  }
-  
-  .map-container iframe {
-    border: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
 
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-   .whatsapp-icon {
+  .whatsapp-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 999;
+
     img {
+      width: 50px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+
+  
+  @media screen and (max-width: 576px) {
+    footer {
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 5px;
+    }
+
+    .footerColumns {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    .box1 h3 {
+      text-align: center; /* Añade esta línea para centrar el h3 */
+    }
+
+    .box1 ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .box1 a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .footerList {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    .footerList li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    .footerList li a {
+      color: #000;
+    }
+
+    .box2 {
+      margin: 0px 10px;
+      padding: 10px;
+      text-align: center;
+      color: black;
+    }
+
+    /* Estilo para el icono de WhatsApp */
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    /* Añade estilos adicionales según sea necesario */
+    .whatsapp-icon img {
       width: 50px;
       border-radius: 50%;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -66,66 +153,4 @@ footer {
   }
 }
 
-
 /*--------- FOOTER del RESTO---------*/
-#colorDeFondo {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #bc948c;
-    margin: 5px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: auto;
-    font-family: "Inter", sans-serif;
-  
-    > div {
-      padding: 10px 0;
-    }
-  
-    .conteiner {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
-    }
-  
-    .box1 a {
-      display: flex;
-      flex-direction: column;
-      color: black;
-      margin: 0px 10px;
-      padding: 10px;
-    }
-  
-    .box2 {
-      display: flex;
-      flex-direction: column;
-      margin: 0px 10px;
-      padding: 10px;
-      text-align: center;
-      color: black;
-    }
-  
-    .box3 {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-    }
-  }
-  
-  .whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-  
-    img {
-      width: 50px;
-      border-radius: 50%;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    }
-  }
-  

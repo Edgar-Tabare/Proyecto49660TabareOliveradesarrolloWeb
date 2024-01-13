@@ -9,9 +9,10 @@
 @import "pages/sevicios";
 @import "pages/proyectos";
 @import "pages/contactos";
-
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css";
 @import "layout/header";
 @import "layout/nav";
+
 @import "layout/footer";
 
 
@@ -27,174 +28,16 @@
   /*-------------------HOME-------------------------------------*/
 
   /**--Footer--**/
-  footer {
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
-  }
-
-  .footerColumns {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
-
-  .box1 h3 {
-    text-align: center; /* Añade esta línea para centrar el h3 */
-  }
-
-  .box1 ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .box1 a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .footerList {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-
-  .footerList li {
-    display: inline-block;
-    margin: 0 20px;
-  }
-
-  .footerList li a {
-    color: #000;
-  }
-
-  .box2 {
-    margin: 0px 10px;
-    padding: 10px;
-    text-align: center;
-    color: black;
-  }
-
-  /* Estilo para el icono de WhatsApp */
-  .whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-  }
-
-  /* Añade estilos adicionales según sea necesario */
-  .whatsapp-icon img {
-    width: 50px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-
+  
   /*-------------------- Nav resto ------------------*/
   /* ... Código anterior ... */
 
   /* Establece el estilo predeterminado para el idmobile */
-  #idmobile {
-    display: block;
-  }
-
-  /* Oculta los elementos que no tienen el idmobile */
-  header nav > ul:not(#idmobile) {
-    display: none;
-  }
-
-  /* Restablece el estilo para la versión móvil */
-
-  header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  header nav ul {
-    display: none;
-  }
-
-  #idmobile {
-    display: block;
-  }
-
-  .headerTitle {
-    font-size: 50px;
-    margin: 10px 0;
-    color: violet;
-  }
-
-  #colorDeFondo {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #bc948c;
-    margin: 5px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: auto;
-    font-family: "Inter", sans-serif;
-  }
+  
 
   /*---------------- Footer Resto ----------------*/
 
-  #colorDeFondo > div {
-    padding: 10px 0;
-  }
-
-  .conteiner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  .box1 a {
-    display: flex;
-    flex-direction: row;
-    color: black;
-    margin: 0px 10px;
-    padding: 10px;
-  }
-
-  .box2 {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 10px;
-    padding: 10px;
-    text-align: center;
-    color: black;
-  }
-
-  .box3 {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-
-  /* Estilo para el icono de WhatsApp */
-  .whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-  }
-
-  /* Añade estilos adicionales según sea necesario */
-  .whatsapp-icon img {
-    width: 50px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
+  
 
   /*-------------------------------Proyectos--------------------*/
 
