@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #d7a9a9;
+  background-color: rgb(215, 169, 169);
   font-family: "Inter", sans-serif;
 }
 
@@ -16,6 +16,14 @@ a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 576px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(215, 169, 169);
+    font-family: "Inter", sans-serif;
+  }
+}
 button {
   padding: 10px;
   background-color: #bc948c;
@@ -89,123 +97,165 @@ a {
   color: white;
 }
 
-/*----------------SOBRE MI---------*/
+/*---------------Sobre MI -----------------*/
 main.sobremMi {
-  width: auto;
-  height: 100vh;
-  margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   font-family: "Inter", sans-serif;
+  padding: 5px;
 }
 main.sobremMi img {
   width: 50%;
   height: auto;
+  padding: 5px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  animation: desaparecer 5s infinite;
+}
+@keyframes desaparecer {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
 }
 main.sobremMi section {
   width: 50%;
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
-  height: auto;
-  font-size: 14px;
-}
-main.sobremMi section h2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  border: 2px solid white;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
+main.sobremMi section h2,
 main.sobremMi section p {
-  display: flex;
-  justify-content: center;
   text-align: center;
+  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@media screen and (max-width: 576px) {
+  main.sobremMi {
+    flex-direction: column;
+  }
+  main.sobremMi img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  main.sobremMi section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  main.sobremMi section h2,
+  main.sobremMi section p {
+    text-align: center;
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 }
 
+/*-----------------------------------------------------*/
 /*------------ Servicios --------------*/
 .servicios {
-  width: auto;
-  height: auto;
-  margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: auto;
-  font-family: "Inter", sans-serif;
-}
-.servicios h2 {
-  text-align: center;
-}
-.servicios .Container1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: auto;
-  font-size: 12px;
-}
-.servicios .leftBox {
-  box-sizing: border-box;
-  padding: 10%;
-  text-align: center;
-}
-.servicios .leftBox ul {
-  padding-left: 20px;
-}
-.servicios .rightBox {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
-  padding: 10%;
+  min-height: 100vh;
+  background: rgb(215, 169, 169);
+  font-family: "Inter", sans-serif;
 }
-.servicios .rightBox img {
-  width: 250px;
-  height: 200px;
-}
-.servicios .leftBoxer,
-.servicios .rightBoxer {
-  box-sizing: border-box;
-  padding: 10%;
-  text-align: center;
-}
-.servicios .leftBoxer img,
-.servicios .rightBoxer img {
-  width: 250px;
-  height: 200px;
-}
-.servicios .leftBoxers,
-.servicios .rightBoxers {
-  box-sizing: border-box;
-  padding: 10%;
-  text-align: center;
-}
-.servicios .leftBoxers img,
-.servicios .rightBoxers img {
+.servicios .card {
+  position: relative;
   width: 300px;
-  height: 200px;
+  height: 480px;
 }
-.servicios .servicioContacos {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  margin-top: 20px;
-  margin: 5px;
-  border: 1px solid #ddd;
+.servicios .card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   border-radius: 10px;
-  overflow: auto;
+  overflow: hidden;
+  transition: 0.5s;
 }
-.servicios .servicioContacos p {
-  display: flex;
-  flex-direction: column;
+.servicios .card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px rgb(215, 169, 169);
+}
+.servicios .card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.servicios .card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  line-height: 1.2;
+  color: black;
+  background: rgba(215, 169, 169, 0.4);
   text-align: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
 }
-.servicios .servicioContacos a {
-  text-decoration: none;
+.servicios .card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(215, 169, 169);
+  padding: 15px;
+  color: #f3f3f3;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px black;
+}
+.servicios .card .back h4 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+.servicios .card .back p {
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.servicios .card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+.servicios .card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
 }
 
 /*---------------Proyectos -----------------*/
@@ -496,11 +546,8 @@ footer .whatsapp-icon img {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 768px) {
-  footer {
-    /* Estilo para el icono de WhatsApp */
-    /* Añade estilos adicionales según sea necesario */
-  }
-  footer footer {
+ 
+ footer {
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -557,11 +604,8 @@ footer .whatsapp-icon img {
   }
 }
 @media screen and (max-width: 576px) {
-  footer {
-    /* Estilo para el icono de WhatsApp */
-    /* Añade estilos adicionales según sea necesario */
-  }
-  footer footer {
+  
+footer {
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -620,20 +664,14 @@ footer .whatsapp-icon img {
 
 /*--------- FOOTER del RESTO---------*/
 /**********ADAPTACION A MOBIL******************/
+/*-------------------HOME-------------------------------------*/
+/**--Footer--**/
+/*-------------------- Nav resto ------------------*/
+/* ... Código anterior ... */
+/* Establece el estilo predeterminado para el idmobile */
+/*---------------- Footer Resto ----------------*/
+/*-------------------------------Proyectos--------------------*/
 @media screen and (max-width: 576px) {
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: rebeccapurple;
-    font-family: "Inter", sans-serif;
-  }
-  /*-------------------HOME-------------------------------------*/
-  /**--Footer--**/
-  /*-------------------- Nav resto ------------------*/
-  /* ... Código anterior ... */
-  /* Establece el estilo predeterminado para el idmobile */
-  /*---------------- Footer Resto ----------------*/
-  /*-------------------------------Proyectos--------------------*/
   #gridProyectos {
     width: auto;
     height: auto;

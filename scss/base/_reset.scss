@@ -17,5 +17,15 @@ body {
   a {
     text-decoration: none;
   }
+  
+  @media screen and (max-width: 576px) {
+    body {
+      margin: 0;
+      padding: 0;
+      background-color:$color-fondoglobal;
+      font-family: "Inter", sans-serif;
+    }
+  }
+
 
   

@@ -18,13 +18,7 @@
 
 /**********ADAPTACION A MOBIL******************/
 
-@media screen and (max-width: 576px) {
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: rebeccapurple;
-    font-family: "Inter", sans-serif;
-  }
+
   /*-------------------HOME-------------------------------------*/
 
   /**--Footer--**/
@@ -40,7 +34,7 @@
   
 
   /*-------------------------------Proyectos--------------------*/
-
+  @media screen and (max-width: 576px) {
   #gridProyectos {
     width: auto;
     height: auto;
