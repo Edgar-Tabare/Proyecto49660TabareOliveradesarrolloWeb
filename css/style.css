@@ -303,11 +303,47 @@ main.sobremMi section p {
     align-items: center;
   }
 }
+.servicios .servicioContacos {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin: 5px;
+  overflow: auto;
+}
+.servicios .servicioContacos p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.servicios .servicioContacos a {
+  text-decoration: none;
+}
 @media screen and (max-width: 576px) {
   .servicios .tarjeta0 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .servicios .servicioContacos {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin: 5px;
+    overflow: auto;
+  }
+  .servicios .servicioContacos p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .servicios .servicioContacos a {
+    text-decoration: none;
   }
 }
 
