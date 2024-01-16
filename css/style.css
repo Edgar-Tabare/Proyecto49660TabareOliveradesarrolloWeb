@@ -4,8 +4,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(215, 169, 169);
   font-family: "Inter", sans-serif;
+  background: #ffffff;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle farthest-corner at center, rgb(215, 169, 169) 20%, rgb(244, 196, 196) 40%, rgb(255, 224, 224) 60%, rgb(255, 253, 253) 80%, rgb(255, 255, 255) 100%);
+  background-size: 100%;
 }
 
 ul {
@@ -20,8 +23,11 @@ a {
   body {
     margin: 0;
     padding: 0;
-    background-color: rgb(215, 169, 169);
     font-family: "Inter", sans-serif;
+    background: #ffffff;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle farthest-corner at center, rgb(215, 169, 169) 20%, rgb(244, 196, 196) 40%, rgb(255, 224, 224) 60%, rgb(255, 253, 253) 80%, rgb(255, 255, 255) 100%);
+    background-size: 100%;
   }
 }
 button {
@@ -186,19 +192,33 @@ main.sobremMi section p {
 }
 
 /*-----------------------------------------------------*/
-/*------------ Servicios --------------*/
 .servicios {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: rgb(215, 169, 169);
   font-family: "Inter", sans-serif;
 }
+.servicios .headertitle {
+  text-align: center;
+  margin-top: 30px;
+}
+.servicios h2 {
+  color: black;
+  margin-bottom: 20px;
+}
+.servicios .tarjeta0 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .servicios .card {
   position: relative;
   width: 300px;
   height: 480px;
+  margin: 20px;
 }
 .servicios .card .face {
   position: absolute;
@@ -208,6 +228,7 @@ main.sobremMi section p {
   border-radius: 10px;
   overflow: hidden;
   transition: 0.5s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .servicios .card .front {
   transform: perspective(600px) rotateY(0deg);
@@ -238,7 +259,7 @@ main.sobremMi section p {
   color: #f3f3f3;
   justify-content: space-between;
   text-align: center;
-  box-shadow: 0 5px 10px black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .servicios .card .back h4 {
   font-size: 30px;
@@ -256,6 +277,38 @@ main.sobremMi section p {
 }
 .servicios .card:hover .back {
   transform: perspective(600px) rotateY(360deg);
+}
+.servicios .servicioContacos {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin: 5px;
+  overflow: auto;
+}
+.servicios .servicioContacos p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.servicios .servicioContacos a {
+  text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+  .servicios .tarjeta0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .servicios .tarjeta0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*---------------Proyectos -----------------*/
@@ -546,8 +599,11 @@ footer .whatsapp-icon img {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 768px) {
- 
- footer {
+  footer {
+    /* Estilo para el icono de WhatsApp */
+    /* Añade estilos adicionales según sea necesario */
+  }
+  footer footer {
     padding-left: 30px;
     display: flex;
     flex-direction: column;
@@ -604,8 +660,11 @@ footer .whatsapp-icon img {
   }
 }
 @media screen and (max-width: 576px) {
-  
-footer {
+  footer {
+    /* Estilo para el icono de WhatsApp */
+    /* Añade estilos adicionales según sea necesario */
+  }
+  footer footer {
     padding-left: 30px;
     display: flex;
     flex-direction: column;

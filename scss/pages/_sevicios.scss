@@ -1,16 +1,33 @@
-/*------------ Servicios --------------*/
 .servicios {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: $color-fondoglobal; // Fondo del contenedor principal
+  background: $color-fondoglobal;
   font-family: "Inter", sans-serif;
+
+  .headertitle {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  h2 {
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .tarjeta0 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
   .card {
     position: relative;
     width: 300px;
     height: 480px;
+    margin: 20px;
 
     .face {
       position: absolute;
@@ -19,7 +36,8 @@
       backface-visibility: hidden;
       border-radius: 10px;
       overflow: hidden;
-      transition: .5s;
+      transition: 0.5s;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .front {
@@ -49,12 +67,12 @@
 
     .back {
       transform: perspective(600px) rotateY(180deg);
-      background: $color-fondoglobal; // Fondo de la tarjeta
+      background: $color-fondoglobal;
       padding: 15px;
       color: #f3f3f3;
       justify-content: space-between;
       text-align: center;
-      box-shadow: 0 5px 10px black;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .back h4 {
@@ -76,6 +94,43 @@
 
     &:hover .back {
       transform: perspective(600px) rotateY(360deg);
+    }
+  }
+
+  .servicioContacos {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin: 5px;
+    overflow: auto;
+
+    p {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+  @media screen and (max-width:1024px) {
+    .tarjeta0 {
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+    }
+  }
+
+
+  @media screen and (max-width: 576px) {
+    .tarjeta0 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
