@@ -1,0 +1,5 @@
+@mixin flexFormulario ($direccion){
+    display: flex;
+    flex-direction: $direccion;
+    margin-bottom: 10px;
+   }
