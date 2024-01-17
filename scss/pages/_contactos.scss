@@ -1,20 +1,49 @@
 /* --------------Contactos --------------- */
 
+
+
+
 .formulario {
-    box-sizing: border-box;
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-  
-    label,
-    input,
-    select,
-    textarea
-    {
-      display: block;
-      margin-bottom: 10px;
-    }  
-   
+  box-sizing: border-box;
+  width: 80%;
+ 
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+  label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
   }
-  
+  input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  select{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  textarea {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+

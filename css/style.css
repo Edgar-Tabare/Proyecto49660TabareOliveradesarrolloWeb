@@ -156,6 +156,41 @@ main.sobremMi section p {
     border-color: transparent;
   }
 }
+@media screen and (max-width: 768px) {
+  main.sobremMi {
+    flex-direction: column;
+  }
+  main.sobremMi img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  main.sobremMi section {
+    width: 100%;
+    padding: 20px;
+    font-size: 12px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  main.sobremMi section h2,
+  main.sobremMi section p {
+    text-align: center;
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+}
 @media screen and (max-width: 576px) {
   main.sobremMi {
     flex-direction: column;
@@ -168,6 +203,7 @@ main.sobremMi section p {
   main.sobremMi section {
     width: 100%;
     padding: 20px;
+    font-size: 12px;
     box-sizing: border-box;
     align-items: center;
   }
@@ -192,13 +228,13 @@ main.sobremMi section p {
 }
 
 /*-----------------------------------------------------*/
+/*---------Servicios-----------*/
 .servicios {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: rgb(215, 169, 169);
   font-family: "Inter", sans-serif;
 }
 .servicios .headertitle {
@@ -211,7 +247,7 @@ main.sobremMi section p {
 }
 .servicios .tarjeta0 {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 }
 .servicios .card {
@@ -296,7 +332,7 @@ main.sobremMi section p {
 .servicios .servicioContacos a {
   text-decoration: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .servicios .tarjeta0 {
     display: flex;
     flex-direction: column;
@@ -321,7 +357,7 @@ main.sobremMi section p {
 .servicios .servicioContacos a {
   text-decoration: none;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 576x) {
   .servicios .tarjeta0 {
     display: flex;
     flex-direction: column;
@@ -347,19 +383,17 @@ main.sobremMi section p {
   }
 }
 
-/*---------------Proyectos -----------------*/
+/*------------Proyectos--------------*/
 .proyectos {
-  font-size: 12px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
 }
 
 #gridProyectos {
   width: auto;
   height: auto;
   margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 #gridProyectos > div {
@@ -394,27 +428,35 @@ main.sobremMi section p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 10px;
 }
-.grid4 .nuestroObjetivo {
+
+.nuestroObjetivo {
   display: flex;
   flex-direction: row;
   background-color: white;
   color: black;
   min-width: 40%;
-  min-width: 30%;
+  min-height: 30%;
   padding: 30px;
   margin: 5px 20px;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   text-align: center;
+  overflow: auto;
 }
-.grid4 .nuestroObjetivo img {
+
+.grid4 img {
   width: 200px;
   height: 200px;
   margin-right: 20px;
 }
-.grid4 .nuestroObjetivo p,
-.grid4 .nuestroObjetivo h3 {
+
+.nuestroObjetivo p {
+  text-align: center;
+}
+
+.nuestroObjetivo h3 {
   text-align: center;
 }
 
@@ -426,346 +468,132 @@ main.sobremMi section p {
   color: black;
   min-width: 40%;
   min-height: 30%;
-  padding: 30px;
-  margin: 5px 20px;
+  padding: 20px;
+  margin: 20px 20px;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+
+.grid5 .text-container {
+  max-width: 100%;
+}
+
 .grid5 img {
   width: 100px;
   height: 100px;
 }
 
+.grid5 h3,
+.grid5 h4,
+.grid5 p {
+  margin: 10px 0;
+}
+
+.grid5 h3 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.grid5 h4 {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.grid5 p {
+  margin-bottom: 15px;
+}
+
 #gridProyectos {
   display: grid;
   gap: 5px;
-  grid-template-areas: "grid1 grid2 grid3 " "grid4 grid4 grid5 ";
-  grid-template-columns: 33% 1fr 1fr;
+  grid-template-areas: "grid1 grid2 grid3" "grid4 grid4 grid5";
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 15% 1fr;
-  min-width: 100wh;
+  min-width: 100vw;
 }
 
-/* --------------Contactos --------------- */
-.formulario {
-  box-sizing: border-box;
-  width: 80%;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
-.formulario label,
-.formulario input,
-.formulario select,
-.formulario textarea {
-  display: block;
-  margin-bottom: 10px;
-}
-
-/*--header pagina incio ---*/
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-header .headerList {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-header .headerList li {
-  margin: 0 10px;
-  color: white;
-}
-
-/*----- header del resto paginas---*/
-.backgroundHeader {
-  font-family: "Inter", sans-serif;
-  background-image: url("../img/headersobremi.png");
-  height: 5%;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: auto;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 10px;
-}
-header h1 {
-  font-size: 50px;
-  margin: 10px 0;
-  color: white;
-  animation: desaparecer 2s infinite;
-}
-@keyframes desaparecer {
-  to {
-    opacity: 1;
-  }
-  from {
-    opacity: 0;
-  }
-}
-header #idmobile {
-  display: none;
-}
-
-nav {
-  display: flex;
-  margin-left: auto;
-}
-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-}
-nav ul li {
-  margin: 0 10px;
-  padding: 0 10px;
-}
-nav ul a {
-  color: white;
-  border-radius: 50px;
-  padding: 10px;
-}
-nav ul a:hover {
-  background-color: white;
-  color: black;
-}
-nav #idmobile {
-  display: none;
-}
-@media screen and (max-width: 576px) {
-  nav #idmobile {
-    display: block;
-  }
-}
-nav #desktop {
-  display: block;
-}
-@media screen and (max-width: 576px) {
-  nav #desktop {
-    display: none;
-  }
-}
-
-footer {
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
-}
-footer > div {
-  padding: 40px 0;
-}
-footer .box1 a {
-  text-decoration: none;
-  color: black;
-}
-footer .footerColumns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-}
-footer .colorDeFondo {
-  padding: 30px;
-  border: 1px solid #ddd; /* Añadido un borde de 10px */
-  border-radius: 5px;
-  font-family: "Inter", sans-serif;
-  width: 100%; /* Ajustado para incluir el borde en el ancho total */
-  box-sizing: border-box; /* Hace que el ancho incluya el borde y el relleno */
-}
-footer .footerList {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-footer .footerList li {
-  display: inline-block;
-  margin: 0 20px;
-}
-footer .footerList li a {
-  color: #000;
-}
-footer .box2 {
-  margin: 0px 10px;
-  padding: 10px;
-  text-align: center;
-  color: black;
-}
-footer .map-container {
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 200px;
-  height: 150px;
-}
-footer .map-container iframe {
-  border: 0;
-  width: 100%;
-  height: 100%;
-}
-footer .whatsapp-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-}
-footer .whatsapp-icon img {
-  width: 50px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
 @media screen and (max-width: 768px) {
-  footer {
-    /* Estilo para el icono de WhatsApp */
-    /* Añade estilos adicionales según sea necesario */
-  }
-  footer footer {
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  #gridProyectos {
+    width: auto;
+    height: auto;
     margin: 5px;
-  }
-  footer .footerColumns {
+    border: 1px solid #ddd;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
-  footer .box1 h3 {
-    text-align: center; /* Añade esta línea para centrar el h3 */
-  }
-  footer .box1 ul {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
   }
-  footer .box1 a {
+  #gridProyectos > div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    color: black;
+    list-style: none;
   }
-  footer .footerList {
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  .grid1 {
+    grid-area: grid1;
+    background-color: black;
+    color: white;
   }
-  footer .footerList li {
-    display: inline-block;
-    margin: 0 20px;
+  .grid2 {
+    grid-area: grid2;
+    background-color: black;
+    color: white;
   }
-  footer .footerList li a {
-    color: #000;
+  .grid3 {
+    grid-area: grid3;
+    background-color: black;
+    color: white;
   }
-  footer .box2 {
-    margin: 0px 10px;
-    padding: 10px;
-    text-align: center;
-    color: black;
-  }
-  footer .whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-  }
-  footer .whatsapp-icon img {
-    width: 50px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-}
-@media screen and (max-width: 576px) {
-  footer {
-    /* Estilo para el icono de WhatsApp */
-    /* Añade estilos adicionales según sea necesario */
-  }
-  footer footer {
-    padding-left: 30px;
+  .grid4 {
+    grid-area: grid4;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 5px;
-  }
-  footer .footerColumns {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
-  footer .box1 h3 {
-    text-align: center; /* Añade esta línea para centrar el h3 */
-  }
-  footer .box1 ul {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
   }
-  footer .box1 a {
-    text-decoration: none;
+  .nuestroObjetivo {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
     color: black;
-  }
-  footer .footerList {
-    padding: 0;
-    margin: 0;
+    min-width: 40%;
+    min-width: 30%;
+    padding: 30px;
+    margin: 5px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     text-align: center;
   }
-  footer .footerList li {
-    display: inline-block;
-    margin: 0 20px;
+  .grid4 img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
   }
-  footer .footerList li a {
-    color: #000;
+  .nuestroObjetivo p {
+    text-align: center; /* Centrar el contenido del párrafo */
   }
-  footer .box2 {
-    margin: 0px 10px;
-    padding: 10px;
-    text-align: center;
+  .nuestroObjetivo h3 {
+    text-align: center; /* Centrar el texto dentro de h3 */
+  }
+  .grid5 {
+    grid-area: grid5;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
     color: black;
+    min-width: 40%;
+    min-height: 30%;
+    padding: 30px;
+    margin: 5px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
-  footer .whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-  }
-  footer .whatsapp-icon img {
-    width: 50px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  .grid5 img {
+    width: 200px;
+    height: 200px;
   }
 }
-
-/*--------- FOOTER del RESTO---------*/
-/**********ADAPTACION A MOBIL******************/
-/*-------------------HOME-------------------------------------*/
-/**--Footer--**/
-/*-------------------- Nav resto ------------------*/
-/* ... Código anterior ... */
-/* Establece el estilo predeterminado para el idmobile */
-/*---------------- Footer Resto ----------------*/
-/*-------------------------------Proyectos--------------------*/
 @media screen and (max-width: 576px) {
   #gridProyectos {
     width: auto;
@@ -846,6 +674,336 @@ footer .whatsapp-icon img {
   .grid5 img {
     width: 200px;
     height: 200px;
+  }
+}
+/* --------------Contactos --------------- */
+.formulario {
+  box-sizing: border-box;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+select {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+textarea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/*--header pagina incio ---*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header .headerList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+header .headerList li {
+  margin: 0 10px;
+  color: white;
+}
+
+/*----- header del resto paginas---*/
+.backgroundHeader {
+  font-family: "Inter", sans-serif;
+  background-image: url("../img/headersobremi.png");
+  height: 5%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+}
+header h1 {
+  font-size: 50px;
+  margin: 10px 0;
+  color: white;
+  animation: desaparecer 2s infinite;
+}
+@keyframes desaparecer {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+header #idmobile {
+  display: none;
+}
+
+/*------------NAV-----------------*/
+nav {
+  display: flex;
+  margin-left: auto;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+nav ul li {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+nav ul a {
+  color: white;
+  border-radius: 50px;
+  padding: 10px;
+}
+nav ul a:hover {
+  background-color: white;
+  color: black;
+}
+nav #idmobile {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  nav #idmobile {
+    display: block;
+  }
+}
+nav #desktop {
+  display: block;
+}
+@media screen and (max-width: 576px) {
+  nav #desktop {
+    display: none;
+  }
+}
+
+/*--------- FOOTER ---------*/
+footer {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+footer > div {
+  padding: 40px 0;
+}
+footer .box1 a {
+  text-decoration: none;
+  color: black;
+}
+footer .footerColumns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+footer .colorDeFondo {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+footer .footerList {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+footer .footerList li {
+  display: inline-block;
+  margin: 0 20px;
+}
+footer .footerList li a {
+  color: #000;
+}
+footer .box2 {
+  margin: 0px 10px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+footer .map-container {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  height: 150px;
+}
+footer .map-container iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+footer .whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+footer .whatsapp-icon img {
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  footer {
+    /* Estilo para el icono de WhatsApp */
+    /* Añade estilos adicionales según sea necesario */
+  }
+  footer footer {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+  }
+  footer .footerColumns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  footer .box1 h3 {
+    text-align: center;
+  }
+  footer .box1 ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .box1 a {
+    text-decoration: none;
+    color: black;
+  }
+  footer .footerList {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  footer .footerList li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+  footer .footerList li a {
+    color: #000;
+  }
+  footer .box2 {
+    margin: 0px 10px;
+    padding: 10px;
+    text-align: center;
+    color: black;
+  }
+  footer .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  footer .whatsapp-icon img {
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (max-width: 576px) {
+  footer {
+    /* Estilo para el icono de WhatsApp */
+    /* Añade estilos adicionales según sea necesario */
+  }
+  footer footer {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+  }
+  footer .footerColumns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  footer .box1 h3 {
+    text-align: center;
+  }
+  footer .box1 ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .box1 a {
+    text-decoration: none;
+    color: black;
+  }
+  footer .footerList {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  footer .footerList li {
+    display: inline-block;
+    margin: 0 20px;
+  }
+  footer .footerList li a {
+    color: #000;
+  }
+  footer .box2 {
+    margin: 0px 10px;
+    padding: 10px;
+    text-align: center;
+    color: black;
+  }
+  footer .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  footer .whatsapp-icon img {
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
 }
 

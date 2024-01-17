@@ -1,18 +1,17 @@
+/*------------Proyectos--------------*/
 
-/*---------------Proyectos -----------------*/
 .proyectos {
-  font-size: 12px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
 }
 
 #gridProyectos {
   width: auto;
-  height: auto;
-  margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: row;
+  height:auto;
+  margin: 5px;  
+  flex-wrap: wrap;
   justify-content: center;
+  
 
   > div {
     display: flex;
@@ -21,6 +20,7 @@
     justify-content: center;
     text-decoration: none;
     list-style: none;
+    
   }
 }
 
@@ -28,29 +28,171 @@
   grid-area: grid1;
   background-color: black;
   color: white;
+ 
 }
 
 .grid2 {
   grid-area: grid2;
   background-color: black;
   color: white;
+  
 }
 
 .grid3 {
   grid-area: grid3;
   background-color: black;
   color: white;
+ 
 }
+
 
 .grid4 {
   grid-area: grid4;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 10px;
+  
+  
+}
+
+.nuestroObjetivo {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  color: black;
+  min-width: 40%;
+  min-height: 30%;
+  padding: 30px;
+  margin: 5px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   text-align: center;
+   overflow: auto;
+  
+}
+
+.grid4 img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px
+  
+}
+.nuestroObjetivo p {
+  text-align: center; 
+}
+
+.nuestroObjetivo h3 {
+  text-align: center; 
+}
+
+
+
+.grid5 {
+  grid-area: grid5;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  min-width: 40%;
+  min-height: 30%;
+  padding: 20px;
+  margin: 20px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+ 
+}
+
+
+.grid5 .text-container {
+  max-width: 100%;
+}
+
+.grid5 img {
+  width: 100px;
+  height: 100px;
+}
+
+.grid5 h3,
+.grid5 h4,
+.grid5 p {
+  margin: 10px 0;
+}
+
+.grid5 h3 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.grid5 h4 {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.grid5 p {
+  margin-bottom: 15px;
+}
+
+
+#gridProyectos {
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "grid1 grid2 grid3"
+    "grid4 grid4 grid5";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 15% 1fr;
+  min-width: 100vw;
+}
+
+@media screen and (max-width:768px) {
+  #gridProyectos {
+    width: auto;
+    height: auto;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #gridProyectos > div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .grid1 {
+    grid-area: grid1;
+    background-color: black;
+    color: white;
+  }
+
+  .grid2 {
+    grid-area: grid2;
+    background-color: black;
+    color: white;
+  }
+
+  .grid3 {
+    grid-area: grid3;
+    background-color: black;
+
+    color: white;
+  }
+  .grid4 {
+    grid-area: grid4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .nuestroObjetivo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: white;
     color: black;
     min-width: 40%;
@@ -61,47 +203,133 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
       rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     text-align: center;
+  }
 
-    img {
+  .grid4 img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+  }
+  .nuestroObjetivo p {
+    text-align: center; /* Centrar el contenido del párrafo */
+  }
+
+  .nuestroObjetivo h3 {
+    text-align: center; /* Centrar el texto dentro de h3 */
+  }
+
+  .grid5 {
+    grid-area: grid5;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    min-width: 40%;
+    min-height: 30%;
+    padding: 30px;
+    margin: 5px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .grid5 img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+  @media screen and (max-width: 576px) {
+    #gridProyectos {
+      width: auto;
+      height: auto;
+      margin: 5px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #gridProyectos > div {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      list-style: none;
+    }
+  
+    .grid1 {
+      grid-area: grid1;
+      background-color: black;
+      color: white;
+    }
+  
+    .grid2 {
+      grid-area: grid2;
+      background-color: black;
+      color: white;
+    }
+  
+    .grid3 {
+      grid-area: grid3;
+      background-color: black;
+  
+      color: white;
+    }
+    .grid4 {
+      grid-area: grid4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .nuestroObjetivo {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      min-width: 40%;
+      min-width: 30%;
+      padding: 30px;
+      margin: 5px 20px;
+      border-radius: 10px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      text-align: center;
+    }
+  
+    .grid4 img {
       width: 200px;
       height: 200px;
       margin-right: 20px;
     }
-
-    p,
-    h3 {
-      text-align: center;
+    .nuestroObjetivo p {
+      text-align: center; /* Centrar el contenido del párrafo */
+    }
+  
+    .nuestroObjetivo h3 {
+      text-align: center; /* Centrar el texto dentro de h3 */
+    }
+  
+    .grid5 {
+      grid-area: grid5;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      min-width: 40%;
+      min-height: 30%;
+      padding: 30px;
+      margin: 5px 20px;
+      border-radius: 10px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+  
+    .grid5 img {
+      width: 200px;
+      height: 200px;
     }
   }
-}
-
-.grid5 {
-  grid-area: grid5;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  color: black;
-  min-width: 40%;
-  min-height: 30%;
-  padding: 30px;
-  margin: 5px 20px;
-  border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
-  img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-#gridProyectos {
-  display: grid;
-  gap: 5px;
-  grid-template-areas:
-    "grid1 grid2 grid3 "
-    "grid4 grid4 grid5 ";
-  grid-template-columns: 33% 1fr 1fr;
-  grid-template-rows: 15% 1fr;
-  min-width: 100wh;
-}

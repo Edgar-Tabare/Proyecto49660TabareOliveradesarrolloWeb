@@ -1,48 +1,87 @@
-
 /*---------------Sobre MI -----------------*/
 
 main.sobremMi {
-    display: flex;
-    justify-content: center;
-    font-family: "Inter", sans-serif;
-    padding: 5px;  
-   
-    img {
-      width: 50%;
-      height: auto;
-      padding: 5px;
-      border: 2px solid white;
-      box-sizing: border-box;
-      border-radius: 10px;
-      animation: desaparecer 5s infinite;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  padding: 5px;  
+ 
+  img {
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    animation: desaparecer 5s infinite;
+  }
+
+  @keyframes desaparecer {
+    to {
+      opacity: 1;
     }
+    from {
+      opacity: 0;
+    }
+  }  
   
-    @keyframes desaparecer {
-      to {
-        opacity: 1;
-      }
+  section {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid white;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    h2,
+    p {
+      text-align: center;
+      animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+    }
+
+    @keyframes typing {
       from {
-        opacity: 0;
+        width: 0;
       }
-    }  
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain; 
+    }
+
     
     section {
-      width: 50%;
+      width: 100%;
       padding: 20px;
+      font-size: 12px;
       box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border: 2px solid white;
-      box-sizing: border-box;
-      border-radius: 10px;
-  
+      align-items: center; 
+
       h2,
       p {
-        text-align: center;
+        text-align: center; 
         animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
       }
-  
+
       @keyframes typing {
         from {
           width: 0;
@@ -51,52 +90,54 @@ main.sobremMi {
           width: 100%;
         }
       }
-  
+
       @keyframes blink {
         50% {
           border-color: transparent;
         }
       }
     }
-  
-    @media screen and (max-width: 576px) {
-      flex-direction: column;
-  
-      
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: contain; 
+  }
+
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+
+    
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain; 
+    }
+
+    
+    section {
+      width: 100%;
+      padding: 20px;
+      font-size: 12px;
+      box-sizing: border-box;
+      align-items: center; 
+
+      h2,
+      p {
+        text-align: center; 
+        animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
       }
-  
-      
-      section {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        align-items: center; 
-  
-        h2,
-        p {
-          text-align: center; 
-          animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+
+      @keyframes typing {
+        from {
+          width: 0;
         }
-  
-        @keyframes typing {
-          from {
-            width: 0;
-          }
-          to {
-            width: 100%;
-          }
+        to {
+          width: 100%;
         }
-  
-        @keyframes blink {
-          50% {
-            border-color: transparent;
-          }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
         }
       }
     }
   }
-  /*-----------------------------------------------------*/
+}
+/*-----------------------------------------------------*/
