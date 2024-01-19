@@ -1,18 +1,15 @@
 /*---------------Sobre MI -----------------*/
 
 main.sobremMi {
-  display: flex;
-  justify-content: center;
+  @include flexGlobal(null, null);
   font-family: "Inter", sans-serif;
-  padding: 5px;  
- 
+  padding: 5px;
+  min-height: 85vh;
+
   img {
-    width: 50%;
-    height: auto;
-    padding: 5px;
-    border: 2px solid white;
+    @include tamaño(50%, auto);
+    @include bordes(5px, 10px, 2px solid white);
     box-sizing: border-box;
-    border-radius: 10px;
     animation: desaparecer 5s infinite;
   }
 
@@ -23,23 +20,19 @@ main.sobremMi {
     from {
       opacity: 0;
     }
-  }  
-  
+  }
+
   section {
+    @include flexGlobal(column, null, center);
+    @include bordes(20px, 10px, 2px solid white);
     width: 50%;
-    padding: 20px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 2px solid white;
-    box-sizing: border-box;
-    border-radius: 10px;
 
     h2,
     p {
       text-align: center;
-      animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+      animation: typing 4s steps(38) 1s 1 normal both,
+        blink 1s steps(1) infinite;
     }
 
     @keyframes typing {
@@ -61,25 +54,24 @@ main.sobremMi {
   @media screen and (max-width: 768px) {
     flex-direction: column;
 
-    
     img {
-      width: 100%;
-      height: auto;
-      object-fit: contain; 
+      @include tamaño(100%, auto);
+
+      object-fit: contain;
     }
 
-    
     section {
       width: 100%;
       padding: 20px;
       font-size: 12px;
       box-sizing: border-box;
-      align-items: center; 
+      align-items: center;
 
       h2,
       p {
-        text-align: center; 
-        animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+        text-align: center;
+        animation: typing 4s steps(38) 1s 1 normal both,
+          blink 1s steps(1) infinite;
       }
 
       @keyframes typing {
@@ -102,25 +94,24 @@ main.sobremMi {
   @media screen and (max-width: 576px) {
     flex-direction: column;
 
-    
     img {
       width: 100%;
       height: auto;
-      object-fit: contain; 
+      object-fit: contain;
     }
 
-    
     section {
       width: 100%;
       padding: 20px;
       font-size: 12px;
       box-sizing: border-box;
-      align-items: center; 
+      align-items: center;
 
       h2,
       p {
-        text-align: center; 
-        animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+        text-align: center;
+        animation: typing 4s steps(38) 1s 1 normal both,
+          blink 1s steps(1) infinite;
       }
 
       @keyframes typing {
@@ -140,4 +131,3 @@ main.sobremMi {
     }
   }
 }
-/*-----------------------------------------------------*/

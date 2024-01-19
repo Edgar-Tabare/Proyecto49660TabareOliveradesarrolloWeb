@@ -1,20 +1,20 @@
 /* --------------Contactos --------------- */
-
-
-
-
 .formulario {
   box-sizing: border-box;
   width: 80%;
- 
+  min-height: 85vh;
+
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
-}
-  
- label, input, select, textarea{
+
+  label,
+  input,
+  select,
+  textarea {
     @include flexFormulario(column);
   }
+}
  
 
 

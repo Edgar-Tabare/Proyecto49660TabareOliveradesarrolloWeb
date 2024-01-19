@@ -1,16 +1,13 @@
 /*--header pagina incio ---*/
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexGlobal(null, center, space-between);
   padding: 10px;
   .headerList {
+    @include boxModel();
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
-    li {
+       li {
       margin: 0 10px;
       color: white;
     }
@@ -20,24 +17,18 @@ header {
 /*----- header del resto paginas---*/
 
 .backgroundHeader {
+  @include flexGlobal(column, center, flex-start);
+  @include bordes(null, 10px, 1px solid #ddd);
   font-family: "Inter", sans-serif;
   background-image: url("../img/headersobremi.png");
   height: 5%;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  background-size: cover; 
   margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
   overflow: auto;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  @include flexGlobal(null, flex-end, space-between);
   padding: 10px;
   h1 {
     font-size: 50px;
@@ -45,16 +36,16 @@ header {
     color: white;
     animation: desaparecer 2s infinite;
 
-  @keyframes desaparecer {
-    to {
-      opacity: 1;
-    }
-    from {
-      opacity: 0;
+    @keyframes desaparecer {
+      to {
+        opacity: 1;
+      }
+      from {
+        opacity: 0;
+      }
     }
   }
-}
-#idmobile {
-  display: none;
-}
+  #idmobile {
+    display: none;
+  }
 }

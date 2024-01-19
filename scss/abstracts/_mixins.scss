@@ -1,5 +1,44 @@
-@mixin flexFormulario ($direccion){
-    display: flex;
+@mixin flexFormulario($direccion) {
+  display: flex;
+  flex-direction: $direccion;
+  margin-bottom: 10px;
+}
+
+@mixin boxModel($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin flexGlobal(
+  $direccion: row,
+  $alineacion: center,
+  $justificado: center,
+) {
+  display: flex;
+ 
+
+
+  @if $direccion != null {
     flex-direction: $direccion;
-    margin-bottom: 10px;
-   }
+  }
+
+  @if $justificado != null {
+    justify-content: $justificado;
+  }
+
+  @if $alineacion != null {
+    align-items: $alineacion;
+  }
+}
+
+@mixin tamaño ($width ,$heigh){
+    width:$width;
+    height:$heigh;   
+}
+
+@mixin bordes ($relleno:null,$radios:null,$bordes:null,$colores:null ){
+    padding:$relleno;
+    border-radius:$radios ;
+    border:$bordes ;
+    color: $colores;
+}

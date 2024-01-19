@@ -1,11 +1,9 @@
 /*--------- FOOTER ---------*/
 
 footer {
+  @include flexGlobal(column, center, null);
   padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
+   margin: 5px;
 
   > div {
     padding: 40px 0;
@@ -17,25 +15,19 @@ footer {
   }
 
   .footerColumns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include flexGlobal(row, null, space-around);
     width: 100%;
   }
 
   .colorDeFondo {
-    padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    @include bordes(30px, 5px, 1px solid #ddd, null);
     font-family: "Inter", sans-serif;
     width: 100%;
     box-sizing: border-box;
-    
   }
 
   .footerList {
-    padding: 0;
-    margin: 0;
+    @include boxModel();
     text-align: center;
 
     li {
@@ -56,16 +48,13 @@ footer {
   }
 
   .map-container {
-    border: 2px solid #ddd;
-    border-radius: 10px;
+    @include bordes(null, 10px, 2px solid #ddd);
+    @include tamaño(200px, 100px);
     overflow: hidden;
-    width: 200px;
-    height: 150px;
 
     iframe {
       border: 0;
-      width: 100%;
-      height: 100%;
+      @include tamaño(100%, 100%);
     }
   }
 
@@ -83,18 +72,13 @@ footer {
   }
   @media screen and (max-width: 768px) {
     footer {
-      padding-left: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flexGlobal(column, center, null);
+      padding-left: 30px;     
       margin: 5px;
     }
 
     .footerColumns {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
+      @include flexGlobal(column, center, space-around);
       width: 100%;
     }
 
@@ -154,22 +138,17 @@ footer {
   @media screen and (max-width: 576px) {
     footer {
       padding-left: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flexGlobal(column, center, null);
       margin: 5px;
     }
 
     .footerColumns {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
+      @include flexGlobal(column, center, space-around);
       width: 100%;
     }
 
     .box1 h3 {
-      text-align: center; 
+      text-align: center;
     }
 
     .box1 ul {
@@ -221,6 +200,3 @@ footer {
     }
   }
 }
-
-
-

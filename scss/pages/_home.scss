@@ -1,22 +1,21 @@
 /*------------------home--------------------*/
 #Home {
+  @include boxModel();
   background-image: url("../img/fondohome.webp");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0;
-  padding: 0;
+ 
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
 .homer {
+   @include flexGlobal(null);
   box-sizing: border-box;
   width: 100%;
   min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ 
   .titulo {
     text-align: center;
     h1 {
@@ -27,17 +26,15 @@
       animation-iteration-count: infinite;
       animation-timing-function: linear;
     }
-    @keyframes spin{
-      from{
+    @keyframes spin {
+      from {
         transform: rotateX(20deg) rotateY(0deg);
       }
-    
-      to{
+
+      to {
         transform: rotateX(-20deg) rotateY(360deg);
       }
     }
-   
-        
   }
   h3 {
     font-size: 1.5em;
@@ -49,12 +46,12 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
-  @keyframes spin{
-    from{
+  @keyframes spin {
+    from {
       transform: rotateX(20deg) rotateY(0deg);
     }
-  
-    to{
+
+    to {
       transform: rotateX(-20deg) rotateY(360deg);
     }
   }

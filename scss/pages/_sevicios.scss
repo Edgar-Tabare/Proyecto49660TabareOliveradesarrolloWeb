@@ -1,9 +1,6 @@
 /*---------Servicios-----------*/
 .servicios {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flexGlobal(column);
   min-height: 100vh;
   font-family: "Inter", sans-serif;
 
@@ -25,14 +22,12 @@
 
   .card {
     position: relative;
-    width: 300px;
-    height: 480px;
+    @include tamaño(300px, 480px);
     margin: 20px;
 
     .face {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      @include tamaño(100%, 100%);
       backface-visibility: hidden;
       border-radius: 10px;
       overflow: hidden;
@@ -47,16 +42,14 @@
 
     .front img {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      @include tamaño(100%, 100%);
       object-fit: cover;
     }
 
     .front h3 {
       position: absolute;
       bottom: 0;
-      width: 100%;
-      height: auto;
+      @include tamaño(100%, auto);
       line-height: 1.2;
       color: black;
       background: rgba($color-fondoglobal, 0.4);
@@ -98,18 +91,13 @@
   }
 
   .servicioContacos {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    @include flexGlobal(null);
     margin-top: 20px;
     margin: 5px;
     overflow: auto;
 
     p {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
+      @include flexGlobal(column);
       margin-bottom: 20px;
     }
 
@@ -117,26 +105,19 @@
       text-decoration: none;
     }
   }
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     .tarjeta0 {
-      display: flex;
-      flex-direction:column;
-      align-items: center;
+      @include flexGlobal(column, center, null);
     }
   }
   .servicioContacos {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    @include flexGlobal(null);
     margin-top: 20px;
     margin: 5px;
     overflow: auto;
 
     p {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
+      @include flexGlobal(column);
       margin-bottom: 20px;
     }
 
@@ -147,29 +128,22 @@
 
   @media screen and (max-width: 576x) {
     .tarjeta0 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flexGlobal(column, center, null);
     }
     .servicioContacos {
-      display: flex;
-      text-align: center;
-      justify-content: center;
+      @include flexGlobal(null);
       margin-top: 20px;
       margin: 5px;
       overflow: auto;
-  
+
       p {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
+        @include flexGlobal(column);
         margin-bottom: 20px;
       }
-  
+
       a {
         text-decoration: none;
       }
+    }
   }
-}
 }

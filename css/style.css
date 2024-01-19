@@ -30,35 +30,36 @@ a {
     background-size: 100%;
   }
 }
+/*----------Componentes *--------------*/
 button {
   padding: 10px;
-  background-color: #bc948c;
-  color: black;
   border-radius: 20px;
   border: blanchedalmond;
+  color: black;
+  background-color: #bc948c;
   cursor: pointer;
 }
 
 /*------------------home--------------------*/
 #Home {
+  margin: 0;
+  padding: 0;
   background-image: url("../img/fondohome.webp");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
 
 .homer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   width: 100%;
   min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .homer .titulo {
   text-align: center;
@@ -109,14 +110,15 @@ main.sobremMi {
   justify-content: center;
   font-family: "Inter", sans-serif;
   padding: 5px;
+  min-height: 85vh;
 }
 main.sobremMi img {
   width: 50%;
   height: auto;
   padding: 5px;
+  border-radius: 10px;
   border: 2px solid white;
   box-sizing: border-box;
-  border-radius: 10px;
   animation: desaparecer 5s infinite;
 }
 @keyframes desaparecer {
@@ -128,15 +130,14 @@ main.sobremMi img {
   }
 }
 main.sobremMi section {
-  width: 50%;
-  padding: 20px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid white;
-  box-sizing: border-box;
+  padding: 20px;
   border-radius: 10px;
+  border: 2px solid white;
+  width: 50%;
+  box-sizing: border-box;
 }
 main.sobremMi section h2,
 main.sobremMi section p {
@@ -227,13 +228,12 @@ main.sobremMi section p {
   }
 }
 
-/*-----------------------------------------------------*/
 /*---------Servicios-----------*/
 .servicios {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
 }
@@ -316,8 +316,8 @@ main.sobremMi section p {
 }
 .servicios .servicioContacos {
   display: flex;
-  text-align: center;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
   margin: 5px;
   overflow: auto;
@@ -325,8 +325,8 @@ main.sobremMi section p {
 .servicios .servicioContacos p {
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 .servicios .servicioContacos a {
@@ -341,8 +341,8 @@ main.sobremMi section p {
 }
 .servicios .servicioContacos {
   display: flex;
-  text-align: center;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
   margin: 5px;
   overflow: auto;
@@ -350,8 +350,8 @@ main.sobremMi section p {
 .servicios .servicioContacos p {
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 .servicios .servicioContacos a {
@@ -365,8 +365,8 @@ main.sobremMi section p {
   }
   .servicios .servicioContacos {
     display: flex;
-    text-align: center;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
     margin: 5px;
     overflow: auto;
@@ -374,8 +374,8 @@ main.sobremMi section p {
   .servicios .servicioContacos p {
     display: flex;
     flex-direction: column;
-    text-align: center;
     justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
   }
   .servicios .servicioContacos a {
@@ -385,92 +385,82 @@ main.sobremMi section p {
 
 /*------------Proyectos--------------*/
 .proyectos {
-  font-size: 16px;
   font-family: "Inter", sans-serif;
 }
-
-#gridProyectos {
+.proyectos #gridProyectos {
   width: auto;
   height: auto;
   margin: 5px;
   flex-wrap: wrap;
   justify-content: center;
+  min-height: 85vh;
 }
-#gridProyectos > div {
+.proyectos #gridProyectos > div {
   display: flex;
-  text-align: center;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   text-decoration: none;
   list-style: none;
 }
-
-.grid1 {
+.proyectos .grid1 {
   grid-area: grid1;
   background-color: black;
   color: white;
 }
-
-.grid2 {
+.proyectos .grid2 {
   grid-area: grid2;
   background-color: black;
   color: white;
 }
-
-.grid3 {
+.proyectos .grid3 {
   grid-area: grid3;
   background-color: black;
   color: white;
 }
-
-.grid4 {
+.proyectos .grid4 {
   grid-area: grid4;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 10px;
+  font-size: 20px;
 }
-
-.nuestroObjetivo {
+.proyectos .nuestroObjetivo {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
   color: black;
+  background-color: white;
   min-width: 40%;
   min-height: 30%;
-  padding: 30px;
   margin: 5px 20px;
-  border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   text-align: center;
   overflow: auto;
 }
-
-.grid4 img {
+.proyectos .grid4 img {
   width: 200px;
   height: 200px;
-  margin-right: 20px;
+  margin-right: 14px;
 }
-
-.nuestroObjetivo p {
+.proyectos .nuestroObjetivo p {
   text-align: center;
 }
-
-.nuestroObjetivo h3 {
+.proyectos .nuestroObjetivo h3 {
   text-align: center;
 }
-
-.grid5 {
+.proyectos .grid5 {
   grid-area: grid5;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
   color: black;
+  background-color: white;
   min-width: 40%;
   min-height: 30%;
-  padding: 20px;
   margin: 20px 20px;
-  border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
@@ -508,26 +498,26 @@ main.sobremMi section p {
   gap: 5px;
   grid-template-areas: "grid1 grid2 grid3" "grid4 grid4 grid5";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 15% 1fr;
+  grid-template-rows: 5% 1fr;
   min-width: 100vw;
 }
 
 @media screen and (max-width: 768px) {
   #gridProyectos {
-    width: auto;
-    height: auto;
-    margin: 5px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
   }
   #gridProyectos > div {
     display: flex;
-    text-align: center;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     text-decoration: none;
     list-style: none;
   }
@@ -555,13 +545,14 @@ main.sobremMi section p {
   .nuestroObjetivo {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px;
     color: black;
+    background-color: white;
     min-width: 40%;
     min-width: 30%;
-    padding: 30px;
     margin: 5px 20px;
-    border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     text-align: center;
   }
@@ -571,22 +562,23 @@ main.sobremMi section p {
     margin-right: 20px;
   }
   .nuestroObjetivo p {
-    text-align: center; /* Centrar el contenido del párrafo */
+    text-align: center;
+    font-size: 1;
   }
   .nuestroObjetivo h3 {
-    text-align: center; /* Centrar el texto dentro de h3 */
+    text-align: center;
   }
   .grid5 {
     grid-area: grid5;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
     color: black;
+    background-color: white;
     min-width: 40%;
     min-height: 30%;
-    padding: 30px;
     margin: 5px 20px;
-    border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
   .grid5 img {
@@ -596,20 +588,20 @@ main.sobremMi section p {
 }
 @media screen and (max-width: 576px) {
   #gridProyectos {
-    width: auto;
-    height: auto;
-    margin: 5px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin: 5px;
   }
   #gridProyectos > div {
     display: flex;
-    text-align: center;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     text-decoration: none;
     list-style: none;
   }
@@ -637,13 +629,13 @@ main.sobremMi section p {
   .nuestroObjetivo {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
     color: black;
+    background-color: white;
     min-width: 40%;
     min-width: 30%;
-    padding: 30px;
     margin: 5px 20px;
-    border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     text-align: center;
   }
@@ -653,22 +645,22 @@ main.sobremMi section p {
     margin-right: 20px;
   }
   .nuestroObjetivo p {
-    text-align: center; /* Centrar el contenido del párrafo */
+    text-align: center;
   }
   .nuestroObjetivo h3 {
-    text-align: center; /* Centrar el texto dentro de h3 */
+    text-align: center;
   }
   .grid5 {
     grid-area: grid5;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
     color: black;
+    background-color: white;
     min-width: 40%;
     min-height: 30%;
-    padding: 30px;
     margin: 5px 20px;
-    border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
   .grid5 img {
@@ -680,12 +672,15 @@ main.sobremMi section p {
 .formulario {
   box-sizing: border-box;
   width: 80%;
+  min-height: 85vh;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
 }
-
-label, input, select, textarea {
+.formulario label,
+.formulario input,
+.formulario select,
+.formulario textarea {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -699,10 +694,10 @@ header {
   padding: 10px;
 }
 header .headerList {
-  list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
+  list-style: none;
+  display: flex;
 }
 header .headerList li {
   margin: 0 10px;
@@ -711,17 +706,17 @@ header .headerList li {
 
 /*----- header del resto paginas---*/
 .backgroundHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #ddd;
   font-family: "Inter", sans-serif;
   background-image: url("../img/headersobremi.png");
   height: 5%;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   margin: 5px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
   overflow: auto;
 }
 
@@ -749,7 +744,6 @@ header #idmobile {
   display: none;
 }
 
-/*------------NAV-----------------*/
 nav {
   display: flex;
   margin-left: auto;
@@ -757,8 +751,8 @@ nav {
 nav {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
   justify-content: flex-end;
+  align-items: flex-end;
 }
 nav ul {
   margin: 0;
@@ -767,13 +761,13 @@ nav ul {
   flex-direction: row;
 }
 nav ul li {
-  margin: 0 10px;
-  padding: 0 10px;
+  margin: 0, 10px;
+  padding: 0, 10px;
 }
 nav ul a {
-  color: white;
-  border-radius: 50px;
   padding: 10px;
+  border-radius: 50px;
+  color: white;
 }
 nav ul a:hover {
   background-color: white;
@@ -798,10 +792,10 @@ nav #desktop {
 
 /*--------- FOOTER ---------*/
 footer {
-  padding-left: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 30px;
   margin: 5px;
 }
 footer > div {
@@ -819,15 +813,15 @@ footer .footerColumns {
 }
 footer .colorDeFondo {
   padding: 30px;
-  border: 1px solid #ddd;
   border-radius: 5px;
+  border: 1px solid #ddd;
   font-family: "Inter", sans-serif;
   width: 100%;
   box-sizing: border-box;
 }
 footer .footerList {
-  padding: 0;
   margin: 0;
+  padding: 0;
   text-align: center;
 }
 footer .footerList li {
@@ -844,11 +838,11 @@ footer .box2 {
   color: black;
 }
 footer .map-container {
-  border: 2px solid #ddd;
   border-radius: 10px;
-  overflow: hidden;
+  border: 2px solid #ddd;
   width: 200px;
-  height: 150px;
+  height: 100px;
+  overflow: hidden;
 }
 footer .map-container iframe {
   border: 0;
@@ -872,10 +866,10 @@ footer .whatsapp-icon img {
     /* Añade estilos adicionales según sea necesario */
   }
   footer footer {
-    padding-left: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 30px;
     margin: 5px;
   }
   footer .footerColumns {

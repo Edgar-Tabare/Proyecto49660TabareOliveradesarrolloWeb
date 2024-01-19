@@ -1,10 +1,7 @@
-button {
-   
-  padding: 10px;
-  background-color:$color-buttons;
-  color:black;
-  border-radius: 20px;
-  border: blanchedalmond;
-  cursor: pointer;  
 
+/*----------Componentes *--------------*/
+button {
+  @include bordes(10px, 20px, blanchedalmond, black);
+  background-color: $color-buttons;
+  cursor: pointer;
 }
